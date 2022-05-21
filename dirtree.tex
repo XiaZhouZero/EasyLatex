@@ -1,0 +1,60 @@
+\documentclass{article} 
+\usepackage{dirtree,array}
+\usepackage{booktabs}
+
+\begin{document}
+
+\renewcommand{\DTstyle}{\textrm}
+% if you need to fiddle with row space
+% in the tree
+%\setlength{\DTbaselineskip}{20pt}
+
+\begin{tabular}{lrr}
+\toprule
+\textbf{Category} & \textbf{\% (tree)} & \textbf{\%}\\
+\midrule
+
+\DTsetlength{0.2em}{0.7em}{0.2em}{0.4pt}{0pt}
+\begin{minipage}{2cm}\dirtree{%
+.1 Animal.
+.2 Human.
+.3 Man.
+.3 Woman.
+.2 Fox.
+.3 Vixen.
+.3 Dog.
+.2 Chicken.
+.3 Cock.
+.3 Hen.
+}\end{minipage}
+&
+\DTsetlength{0pt}{0pt}{0pt}{0pt}{0pt}
+\begin{minipage}{0.4cm}\dirtree{%
+.1 100.
+.1 50.
+.1 20.
+.1 30.
+.1 30.
+.1 16.
+.1 14.
+.1 20.
+.1 8.
+.1 12.
+}\end{minipage}
+&
+\begin{tabular}{r}%
+100\\
+50\\
+20\\
+30\\
+30\\
+16\\
+14\\
+20\\
+8\\
+12
+\end{tabular}
+\\
+\bottomrule
+\end{tabular}
+\end{document}
